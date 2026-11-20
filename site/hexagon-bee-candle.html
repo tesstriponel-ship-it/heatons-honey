@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hexagon bee candle — Heatons Honey</title>
+<meta name="description" content="Raw honey and hand-poured candles from hives in Heaton Moor, Stockport. Order online and collect in person.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;family=Cormorant+Garamond:ital,wght@1,400&amp;family=Work+Sans:wght@300;400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF8F3}
+a{color:#2A2722}a:hover{color:#8A6A1F}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #2A2722;outline-offset:4px}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] .hh-plus{transform:rotate(45deg)}
+@media (max-width:760px){.hh-hide-sm{display:none !important}}
+.hh-alt{opacity:0;transition:opacity .45s ease}
+.hh-tile:hover .hh-alt,.hh-tile:focus-visible .hh-alt{opacity:1}
+@media (prefers-reduced-motion:reduce){.hh-alt{transition:none}}
+.hh-btn-dark,.hh-btn-line,.hh-btn-ghost,.hh-btn-plus,.hh-btn-text{transition:background-color .2s ease,color .2s ease,border-color .2s ease,opacity .2s ease}
+.hh-btn-dark:hover:not(:disabled){background:#4A453B !important}
+.hh-btn-line:hover:not(:disabled){background:#2A2722 !important;color:#FAF8F3 !important}
+.hh-btn-ghost:hover:not(:disabled):not([aria-pressed="true"]){background:#EFE8D6 !important}
+.hh-btn-plus:hover{background:#2A2722 !important;color:#FAF8F3 !important;border-color:#2A2722 !important}
+.hh-btn-text:hover:not(:disabled){opacity:.6}
+.hh-pop{animation:hhPop .28s ease}
+@keyframes hhPop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hh-btn-dark,.hh-btn-line,.hh-btn-ghost,.hh-btn-plus,.hh-btn-text{transition:none}.hh-pop{animation:none}}
+@media (max-width:760px){
+.hh-m-autoh{height:auto !important}
+.hh-m-fullw{width:auto !important;max-width:100% !important}
+.hh-m-px{padding-left:20px !important;padding-right:20px !important}
+.hh-m-py{padding-top:56px !important;padding-bottom:64px !important}
+.hh-m-gap{gap:40px !important}
+.hh-m-grid2{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:32px 14px !important}
+.hh-m-first{order:-1}
+.hh-m-jar{width:min(60%,230px) !important}
+.hh-m-hero{padding-top:8px !important;padding-bottom:64px !important}
+.hh-m-pad{padding:24px 20px !important}
+.hh-m-stack{flex-direction:column !important;align-items:flex-start !important;gap:16px !important}
+}
+</style>
+<style>#app:empty{min-height:100vh}</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="view">
+<div id="top" style="font-family: 'Work Sans', system-ui, sans-serif; font-weight: 300; color: #2A2722; background: #FAF8F3; min-height: 100%">
+
+<!-- Header -->
+<header class="hh-m-px" style="max-width: 1240px; margin: 0 auto; padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a href="index.html" aria-label="Heatons Honey, home" style="display: block; color: #2A2722">
+<svg viewBox="-10 38 642 372" width="101" height="59" role="img" aria-label="Heatons Honey" fill="none" stroke="currentColor" style="overflow: visible" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="2"><path d="M0 50V390M90 50V390M0 220H90"/><path d="M180 100H120V200H180M120 150H170"/><path d="M198 200L236 100L274 200M211 166H261"/><path d="M292 100H362M327 100V200"/><path d="M420 88L460.0 119.0V181.0L420 212L380.0 181.0V119.0Z"/><path d="M478 200V100L542 200V100"/><path d="M620 116C612 104 600 100 590 100C572 100 562 110 562 124C562 140 576 146 591 150C606 154 620 160 620 176C620 191 608 200 590 200C576 200 566 194 560 184"/><path d="M180 230L240.0 272.5V357.5L180 400L120.0 357.5V272.5Z"/><path d="M283 390V240L363 390V240"/><path d="M482 240H406V390H482M406 315H474"/><path d="M526 240L574 315L622 240M574 315V390"/></svg>
+</a>
+<nav aria-label="Main" style="display: flex; align-items: center; gap: 36px; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase"><a href="index.html" class="hh-hide-sm" style="text-decoration: none; padding: 14px 0px">Shop</a><a href="about.html" class="hh-hide-sm" style="text-decoration: none; padding: 14px 0px">About</a><a href="order.html" aria-label="{{ basketLabel }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 2px; text-decoration: none; color: #2A2722"><svg width="26" height="24" viewBox="0 0 26 24" aria-hidden="true"><path d="M1.5 2.5H5l1.2 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.6 5.5H24l-3 9.5H8.4Z" fill="currentColor"></path><path d="M8.4 15l-.6 2.6H21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9.5" cy="21" r="1.8" fill="currentColor"></circle><circle cx="19" cy="21" r="1.8" fill="currentColor"></circle></svg><span aria-live="polite" style="font-family: Georgia, 'Times New Roman', serif; font-size: 20px; letter-spacing: 0; text-transform: none; line-height: 1; height: 24px">{{ basketCount }}</span></a></nav>
+</header>
+<!-- Basket pop-up -->
+<sc-if value="{{ popOpen }}" hint-placeholder-val="{{ false }}">
+<div class="hh-pop" role="dialog" aria-labelledby="pop-title" style="position: fixed; top: 20px; right: 20px; z-index: 50; width: min(340px, calc(100% - 40px)); background: #FAF8F3; border: 1px solid #E4DED1; box-shadow: 0 20px 44px rgba(60,45,20,0.12); padding: 24px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<p id="pop-title" role="status" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #6E675B">Added to your basket</p>
+<button type="button" class="hh-btn-ghost" onClick="{{ closePop }}" aria-label="Close" style="width: 36px; height: 36px; margin: -8px -8px -8px 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+</div>
+<div style="display: flex; gap: 16px; align-items: center">
+<span style="width: 64px; height: 80px; flex: none; background: {{ tint }}"><img src="{{ popImg }}" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain"></span>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase">{{ popName }}</p>
+<p style="margin: 0; font-size: 14px; color: #6E675B">{{ popDetail }}</p>
+</div>
+</div>
+<p style="margin: 0; padding-top: 16px; border-top: 1px solid #E4DED1; display: flex; justify-content: space-between; font-size: 14px"><span>Basket</span><span>{{ basketItemsText }}</span></p>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="order.html" class="hh-btn-dark" style="display: flex; align-items: center; justify-content: center; min-height: 50px; background: #2A2722; color: #FAF8F3; text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">View basket</a>
+<button type="button" class="hh-btn-text" onClick="{{ closePop }}" style="min-height: 44px; border: 0; background: transparent; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">Keep shopping</button>
+</div>
+</div>
+</sc-if>
+
+<main>
+<nav class="hh-m-px" aria-label="Breadcrumb" style="max-width: 1240px; margin: 0 auto; padding: 8px 40px 0">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-size: 11px; color: #6E675B"><a href="index.html" style="color: #6E675B; text-decoration: none">Shop</a> <span aria-hidden="true" style="padding: 0 8px">›</span> <span aria-current="page" style="color: #2A2722">Hexagon bee candle</span></p>
+</nav>
+
+<section class="hh-m-px hh-m-py hh-m-gap" aria-labelledby="product-title" style="max-width: 1240px; margin: 0 auto; padding: 40px 40px 136px; display: flex; flex-wrap: wrap; gap: 80px; align-items: flex-start">
+<div style="flex: 1.25 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="aspect-ratio: 4 / 5; background: {{ tint }}; overflow: hidden">
+<img src="{{ mainSrc }}" alt="{{ mainAlt }}" style="display: block; width: 100%; height: 100%; object-fit: {{ mainFit }}">
+</div>
+
+</div>
+
+<div style="flex: 1 1 340px; min-width: 0; max-width: 460px; display: flex; flex-direction: column; gap: 28px; padding-top: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h1 id="product-title" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 34px; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase">Hexagon bee candle</h1>
+<p style="margin: 0; font-size: 18px">{{ priceLabel }}</p>
+</div>
+<div style="display: flex; gap: 12px; align-items: stretch">
+<div role="group" aria-label="Quantity" style="display: flex; align-items: center; border: 1px solid #CFC7B6">
+<button class="hh-btn-ghost" type="button" onClick="{{ dec }}" disabled="{{ cantDec }}" aria-label="Remove one" style="width: 46px; height: 52px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12h16"/></svg></button>
+<span aria-live="polite" style="min-width: 32px; text-align: center; font-size: 16px">{{ qty }}</span>
+<button class="hh-btn-ghost" type="button" onClick="{{ inc }}" aria-label="Add one" style="width: 46px; height: 52px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
+</div>
+<button class="hh-btn-dark" type="button" onClick="{{ add }}" style="flex: 1; min-height: 54px; padding: 0 24px; background: #2A2722; color: #FAF8F3; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-size: 13px">{{ addText }}</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px; border-top: 1px solid #E4DED1; padding-top: 28px">
+<p style="margin: 0; font-size: 16px; line-height: 1.85; color: #4A453B">A short hexagonal candle with a honeycomb top and two bees beside the wick.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.85; color: #4A453B">[A SHORT DESCRIPTION: WHAT IT'S MADE FROM, HOW IT'S MADE, AND THE SCENT WHEN LIT.]</p>
+</div>
+<dl style="margin: 0; border-top: 1px solid #E4DED1; font-size: 15px">
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 14px 0; border-bottom: 1px solid #E4DED1"><dt style="color: #6E675B">Made from</dt><dd style="margin: 0; text-align: right">[MATERIAL], cotton wick</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 14px 0; border-bottom: 1px solid #E4DED1"><dt style="color: #6E675B">Size</dt><dd style="margin: 0; text-align: right">[HEIGHT / DIAMETER]</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 14px 0; border-bottom: 1px solid #E4DED1"><dt style="color: #6E675B">Burn time</dt><dd style="margin: 0; text-align: right">[BURN TIME]</dd></div>
+</dl>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #6E675B">Collection only, from SK4 3NQ. You'll choose a day and time slot at checkout.</p>
+</div>
+</section>
+
+<section aria-labelledby="more-title" style="border-top: 1px solid #E4DED1">
+<div class="hh-m-px hh-m-py" style="max-width: 1240px; margin: 0 auto; padding: 96px 40px 128px">
+<h2 id="more-title" style="margin: 0 0 48px; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 400; font-size: 12px; letter-spacing: 0.32em; color: #6E675B; text-align: center">More from the hives</h2>
+<ul class="hh-m-grid2" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px 28px">
+<li><a href="honey.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<span style="display: block; aspect-ratio: 4 / 5; background: {{ tint }}"><img src="assets/tile-honey.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain"></span>
+<span style="display: flex; flex-direction: column; gap: 4px; text-align: center"><span style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-size: 13px; letter-spacing: 0.18em">Heatons Honey</span><span style="font-size: 14px; color: #6E675B">340g jar</span></span>
+</a></li>
+<li><a href="beehive-candle.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<span style="display: block; aspect-ratio: 4 / 5; background: {{ tint }}"><img src="assets/tile-beehive.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain"></span>
+<span style="display: flex; flex-direction: column; gap: 4px; text-align: center"><span style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-size: 13px; letter-spacing: 0.18em">Beehive candle</span><span style="font-size: 14px; color: #6E675B">Candle</span></span>
+</a></li>
+<li><a href="honeycomb-bee-candle.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<span style="display: block; aspect-ratio: 4 / 5; background: {{ tint }}"><img src="assets/tile-honeycomb-bee.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain"></span>
+<span style="display: flex; flex-direction: column; gap: 4px; text-align: center"><span style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-size: 13px; letter-spacing: 0.18em">Honeycomb bee candle</span><span style="font-size: 14px; color: #6E675B">Candle</span></span>
+</a></li>
+<li><a href="honeycomb-pillar-candle.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<span style="display: block; aspect-ratio: 4 / 5; background: {{ tint }}"><img src="assets/tile-honeycomb-pillar.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain"></span>
+<span style="display: flex; flex-direction: column; gap: 4px; text-align: center"><span style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; text-transform: uppercase; font-size: 13px; letter-spacing: 0.18em">Honeycomb pillar candle</span><span style="font-size: 14px; color: #6E675B">Candle</span></span>
+</a></li>
+</ul>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer style="background: #966712">
+<div class="hh-m-px" style="max-width: 1240px; margin: 0 auto; padding: 56px 40px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; font-size: 14px; color: #FAF8F3">
+<svg viewBox="-10 38 642 372" width="83" height="48" role="img" aria-label="Heatons Honey" fill="none" stroke="#FAF8F3" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="2"><path d="M0 50V390M90 50V390M0 220H90"/><path d="M180 100H120V200H180M120 150H170"/><path d="M198 200L236 100L274 200M211 166H261"/><path d="M292 100H362M327 100V200"/><path d="M420 88L460.0 119.0V181.0L420 212L380.0 181.0V119.0Z"/><path d="M478 200V100L542 200V100"/><path d="M620 116C612 104 600 100 590 100C572 100 562 110 562 124C562 140 576 146 591 150C606 154 620 160 620 176C620 191 608 200 590 200C576 200 566 194 560 184"/><path d="M180 230L240.0 272.5V357.5L180 400L120.0 357.5V272.5Z"/><path d="M283 390V240L363 390V240"/><path d="M482 240H406V390H482M406 315H474"/><path d="M526 240L574 315L622 240M574 315V390"/></svg>
+<p style="margin: 0">SK4 3NQ, Stockport · <a href="tel:07814854517" style="color: #FAF8F3">07814 854 517</a> · Instagram [@HANDLE]</p>
+<p style="margin: 0">© 2026 Heatons Honey · Produce of England</p>
+</div>
+</footer>
+</div>
+</template>
+<noscript><p style="font-family:sans-serif;padding:40px">Please turn on JavaScript to order from Heatons Honey.</p></noscript>
+<script src="js/dc-lite.js"></script>
+<script src="js/shop.js"></script>
+<script>
+const PRODUCT_ID = 'hexagon';
+const IMGS = [{"src": "assets/tile-hexagon-bee.webp", "alt": "A short hexagonal candle with honeycomb and bees on top", "fit": "contain"}];
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { img: 0, qty: 1, added: false, pop: null }; }
+  renderVals() {
+    const s = this.state, cur = IMGS[s.img] || IMGS[0];
+    return Object.assign({
+      tint: '#F3EAD3',
+      priceLabel: HH.priceLabel(PRODUCT_ID),
+      mainSrc: cur.src, mainAlt: cur.alt, mainFit: cur.fit,
+      thumbs: IMGS.length > 1 ? IMGS.map((im, i) => ({ src: im.src, fit: im.fit, label: 'Show photo ' + (i + 1) + ' of ' + IMGS.length,
+        pressed: i === s.img ? 'true' : 'false', border: i === s.img ? '#2A2722' : 'transparent', pick: () => this.setState({ img: i }) })) : [],
+      qty: s.qty, cantDec: s.qty <= 1,
+      inc: () => this.setState({ qty: Math.min(24, s.qty + 1), added: false }),
+      dec: () => this.setState({ qty: Math.max(1, s.qty - 1), added: false }),
+      add: () => { HH.add(PRODUCT_ID, s.qty); this.setState({ added: true, qty: 1, pop: { id: PRODUCT_ID, qty: HH.basket()[PRODUCT_ID] || 0 } }); },
+      addText: s.added ? 'Added' : 'Add to basket',
+      closePop: () => this.setState({ pop: null })
+    }, HH.headerVals(s.pop));
+  }
+}
+HH.load().then(() => DC.mount(Component));
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "currency": "GBP",
+  "collection": {
+    "timezone": "Europe/London",
+    "postcode": "SK4 3NQ",
+    "slotMinutes": 60,
+    "weeksAhead": 8,
+    "days": {
+      "saturday": [
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "sunday": [
+        "10:00",
+        "11:00"
+      ]
+    }
+  },
+  "products": [
+    {
+      "id": "honey",
+      "name": "Heatons Honey",
+      "detail": "340g jar",
+      "page": "honey.html",
+      "price": 1200,
+      "squareVariationId": "",
+      "tile": "assets/tile-honey.webp",
+      "image": "assets/honey-jar.webp",
+      "alt": "A 340g jar of Heatons Honey"
+    },
+    {
+      "id": "beehive",
+      "name": "Beehive candle",
+      "detail": "Candle",
+      "page": "beehive-candle.html",
+      "price": 400,
+      "squareVariationId": "",
+      "tile": "assets/tile-beehive.webp",
+      "image": "assets/beehive-candle.webp",
+      "hoverImage": "assets/beehive-candle-lit.webp",
+      "alt": "A yellow candle shaped like a traditional beehive"
+    },
+    {
+      "id": "sphere",
+      "name": "Honeycomb bee candle",
+      "detail": "Candle",
+      "page": "honeycomb-bee-candle.html",
+      "price": 400,
+      "squareVariationId": "",
+      "tile": "assets/tile-honeycomb-bee.webp",
+      "image": "assets/honeycomb-bee-candle.webp",
+      "alt": "A round honeycomb-textured candle with a bee on top"
+    },
+    {
+      "id": "pillar",
+      "name": "Honeycomb pillar candle",
+      "detail": "Candle",
+      "page": "honeycomb-pillar-candle.html",
+      "price": 800,
+      "squareVariationId": "",
+      "tile": "assets/tile-honeycomb-pillar.webp",
+      "image": "assets/honeycomb-pillar-candle.webp",
+      "alt": "A hexagonal pillar candle covered in honeycomb and bees"
+    },
+    {
+      "id": "hexagon",
+      "name": "Hexagon bee candle",
+      "detail": "Candle",
+      "page": "hexagon-bee-candle.html",
+      "price": 300,
+      "squareVariationId": "",
+      "tile": "assets/tile-hexagon-bee.webp",
+      "image": "assets/hexagon-bee-candle.webp",
+      "alt": "A short hexagonal candle with honeycomb and bees on top"
+    }
+  ]
+}

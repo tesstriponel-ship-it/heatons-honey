@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heatons Honey — honey & candles from Heaton Moor</title>
+<meta name="description" content="Raw honey and hand-poured candles from hives in Heaton Moor, Stockport. Order online and collect in person.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&amp;family=Josefin+Sans:wght@300;400&amp;family=Cormorant+Garamond:ital,wght@1,400&amp;family=Work+Sans:wght@300;400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF8F3}
+a{color:#2A2722}a:hover{color:#8A6A1F}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #2A2722;outline-offset:4px}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] .hh-plus{transform:rotate(45deg)}
+@media (max-width:760px){.hh-hide-sm{display:none !important}}
+.hh-alt{opacity:0;transition:opacity .45s ease}
+.hh-tile:hover .hh-alt,.hh-tile:focus-visible .hh-alt{opacity:1}
+@media (prefers-reduced-motion:reduce){.hh-alt{transition:none}}
+.hh-btn-dark,.hh-btn-line,.hh-btn-ghost,.hh-btn-plus,.hh-btn-text{transition:background-color .2s ease,color .2s ease,border-color .2s ease,opacity .2s ease}
+.hh-btn-dark:hover:not(:disabled){background:#4A453B !important}
+.hh-btn-line:hover:not(:disabled){background:#2A2722 !important;color:#FAF8F3 !important}
+.hh-btn-ghost:hover:not(:disabled):not([aria-pressed="true"]){background:#EFE8D6 !important}
+.hh-btn-plus:hover{background:#2A2722 !important;color:#FAF8F3 !important;border-color:#2A2722 !important}
+.hh-btn-text:hover:not(:disabled){opacity:.6}
+.hh-pop{animation:hhPop .28s ease}
+@keyframes hhPop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hh-btn-dark,.hh-btn-line,.hh-btn-ghost,.hh-btn-plus,.hh-btn-text{transition:none}.hh-pop{animation:none}}
+@media (max-width:760px){
+.hh-m-autoh{height:auto !important}
+.hh-m-fullw{width:auto !important;max-width:100% !important}
+.hh-m-px{padding-left:20px !important;padding-right:20px !important}
+.hh-m-py{padding-top:56px !important;padding-bottom:64px !important}
+.hh-m-gap{gap:40px !important}
+.hh-m-grid2{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:32px 14px !important}
+.hh-m-first{order:-1}
+.hh-m-jar{width:min(60%,230px) !important}
+.hh-m-hero{padding-top:8px !important;padding-bottom:64px !important}
+.hh-m-pad{padding:24px 20px !important}
+.hh-m-stack{flex-direction:column !important;align-items:flex-start !important;gap:16px !important}
+}
+</style>
+<style>#app:empty{min-height:100vh}</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="view">
+<div id="top" style="font-family: 'Work Sans', system-ui, sans-serif; font-weight: 300; color: #2A2722; background: #FAF8F3; min-height: 100%">
+
+<!-- Header -->
+<header class="hh-m-px" style="max-width: 1240px; margin: 0 auto; padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a href="#top" aria-label="Heatons Honey, home" style="display: block; color: #2A2722">
+<svg viewBox="-10 38 642 372" width="101" height="59" role="img" aria-label="Heatons Honey" fill="none" stroke="currentColor" style="overflow: visible" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="2"><path d="M0 50V390M90 50V390M0 220H90"></path><path d="M180 100H120V200H180M120 150H170"></path><path d="M415.41 97.93 L454.4 123.4 L454.5 174.4 L415.5 196.9 L374.4 175.5 L373.3 123.5 Z"></path><path d="M198 200L236 100L274 200M211 166H261"></path><path d="M292 100H362M327 100V200"></path><path d="M478 200V100L542 200V100"></path><path d="M620 116C612 104 600 100 590 100C572 100 562 110 562 124C562 140 576 146 591 150C606 154 620 160 620 176C620 191 608 200 590 200C576 200 566 194 560 184"></path><path d="M180.4 243.4 L240 272.5 L240 357.5 L179.8 389.1 L120 357.5 L120 272.5 Z"></path><path d="M283 390V240L363 390V240"></path><path d="M482 240H406V390H482M406 315H474"></path><path d="M526 240L574 315L622 240M574 315V390"></path></svg>
+</a>
+<nav aria-label="Main" style="display: flex; align-items: center; gap: 36px; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase"><a href="#shop" class="hh-hide-sm" style="text-decoration: none; padding: 14px 0px">Shop</a><a href="about.html" class="hh-hide-sm" style="text-decoration: none; padding: 14px 0px">About</a><a href="order.html" aria-label="{{ basketLabel }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 2px; text-decoration: none; color: #2A2722"><svg width="26" height="24" viewBox="0 0 26 24" aria-hidden="true"><path d="M1.5 2.5H5l1.2 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.6 5.5H24l-3 9.5H8.4Z" fill="currentColor"></path><path d="M8.4 15l-.6 2.6H21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9.5" cy="21" r="1.8" fill="currentColor"></circle><circle cx="19" cy="21" r="1.8" fill="currentColor"></circle></svg><span aria-live="polite" style="font-family: Georgia, 'Times New Roman', serif; font-size: 20px; letter-spacing: 0; text-transform: none; line-height: 1; height: 24px">{{ basketCount }}</span></a></nav>
+</header>
+<!-- Basket pop-up -->
+<sc-if value="{{ popOpen }}" hint-placeholder-val="{{ false }}">
+<div class="hh-pop" role="dialog" aria-labelledby="pop-title" style="position: fixed; top: 20px; right: 20px; z-index: 50; width: min(340px, calc(100% - 40px)); background: #FAF8F3; border: 1px solid #E4DED1; box-shadow: 0 20px 44px rgba(60,45,20,0.12); padding: 24px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<p id="pop-title" role="status" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #6E675B">Added to your basket</p>
+<button type="button" class="hh-btn-ghost" onClick="{{ closePop }}" aria-label="Close" style="width: 36px; height: 36px; margin: -8px -8px -8px 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></button>
+</div>
+<div style="display: flex; gap: 16px; align-items: center">
+<span style="width: 64px; height: 80px; flex: none; background: {{ tint }}"><img src="{{ popImg }}" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain"></span>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase">{{ popName }}</p>
+<p style="margin: 0; font-size: 14px; color: #6E675B">{{ popDetail }}</p>
+</div>
+</div>
+<p style="margin: 0; padding-top: 16px; border-top: 1px solid #E4DED1; display: flex; justify-content: space-between; font-size: 14px"><span>Basket</span><span>{{ basketItemsText }}</span></p>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="order.html" class="hh-btn-dark" style="display: flex; align-items: center; justify-content: center; min-height: 50px; background: #2A2722; color: #FAF8F3; text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">View basket</a>
+<button type="button" class="hh-btn-text" onClick="{{ closePop }}" style="min-height: 44px; border: 0; background: transparent; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">Keep shopping</button>
+</div>
+</div>
+</sc-if>
+
+<!-- Hero -->
+<section class="hh-m-px hh-m-hero" aria-labelledby="hero-title" style="max-width: 1240px; margin: 0 auto; padding: 32px 40px 120px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px 56px; align-items: center">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 36px; max-width: 520px">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; display: flex; align-items: center; gap: 14px; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #6E675B">Heaton Moor, Stockport</p>
+<h1 class="hh-m-fullw" id="hero-title" style="margin: 0; display: flex; flex-direction: column; gap: 4px; color: #2A2722"><span style="font-family: &quot;Josefin Sans&quot;, sans-serif; font-weight: 300; font-size: clamp(38px, 4vw, 56px); line-height: 1.1; letter-spacing: 0.14em; text-transform: uppercase">Honey &amp; candles</span><span style="font-family: &quot;Cormorant Garamond&quot;, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 3.8vw, 54px); line-height: 1.1; letter-spacing: 0.005em">from the hives of the Heatons</span></h1>
+</div>
+<p class="hh-m-fullw" style="margin: 0; font-size: 17px; line-height: 1.8; color: #4A453B; max-width: 38ch">Kept by Michael Dale, a Master Beekeeper in the Heatons. Every jar is labelled by hand, and every candle is hand-poured</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<button type="button" class="hh-btn-dark" onClick="{{ addHoney }}" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 34px; background: #2A2722; color: #FAF8F3; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">Add to basket</button>
+<a class="hh-btn-line" href="about.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 34px; border: 1px solid #2A2722; text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">About</a>
+</div>
+<p style="margin: -16px 0 0; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #6E675B">340g jar · {{priceLabel}} · Collection only</p>
+</div>
+<div class="hh-m-first" style="display: flex; justify-content: center">
+<img class="hh-m-jar" src="assets/honey-jar-hero.webp" alt="A 340g jar of Heatons Honey with a gold lid and white label" style="display: block; width: min(72%, 360px); height: auto; filter: drop-shadow(0 24px 28px rgba(80,60,20,0.14))">
+</div>
+</section>
+
+<!-- How it works -->
+<section class="hh-m-px hh-m-py hh-m-autoh" id="shop" aria-labelledby="shop-title" style="max-width: 1240px; margin: 0 auto; padding: 136px 40px 128px; padding-top: 40px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; margin-bottom: 64px">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #6E675B">The shop</p>
+<h2 id="shop-title" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 36px; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase">Honey <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; text-transform: none; letter-spacing: 0.01em; font-size: 1.15em">&amp;</span> candles</h2>
+</div>
+<ul class="hh-m-grid2" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px 28px">
+<sc-for list="{{ products }}" as="p" hint-placeholder-count="5">
+<li style="display: flex; flex-direction: column; gap: 18px">
+<div style="position: relative">
+<a href="{{ p.href }}" class="hh-tile" aria-label="{{ p.linkLabel }}" style="position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 5; background: {{tint}}; text-decoration: none">
+<img src="{{ p.img }}" alt="{{ p.alt }}" style="display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 12px 14px rgba(80,60,20,0.10))">
+<sc-if value="{{ p.hasHover }}" hint-placeholder-val="{{ false }}"><img class="hh-alt" src="{{ p.hoverImg }}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></sc-if>
+</a>
+<button class="hh-btn-plus" type="button" onClick="{{ p.add }}" aria-label="{{ p.addLabel }}" style="position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; padding: 0; border-radius: 999px; border: 1px solid #CFC7B6; background: rgba(250,248,243,0.85); color: #2A2722; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"></path></svg></button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; text-align: center">
+<h3 style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase">{{ p.name }}</h3>
+<p style="margin: 0; font-size: 14px; color: #6E675B">{{ p.detail }} · {{ p.priceLabel }}</p>
+</div>
+</li>
+</sc-for>
+</ul>
+<div style="display: flex; justify-content: center; margin-top: 64px">
+
+</div>
+</section><section class="hh-m-px hh-m-py hh-m-autoh hh-m-fullw" aria-labelledby="how-title" style="margin: 0 auto; padding: 24px 40px 136px; background-color: #F3EAD3; padding-top: 80px; padding-left: 0px">
+<h2 id="how-title" style="margin: 0 0 48px; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; text-align: center; color: #6E675B">How it works</h2>
+<div style="position: relative; max-width: 960px; margin: 0 auto">
+
+<ol style="position: relative; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 56px 48px">
+<li style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 76px; background-color: #f3ead3"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 52px; line-height: 1; color: #2A2722"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Step </span>1</span></span>
+<h3 style="margin: 4px 0 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">Choose your things</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A453B; max-width: 24ch">Honey, candles, or a bit of both.</p>
+</li>
+<li style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 76px; background-color: #f3ead3"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 52px; line-height: 1; color: #2A2722"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Step </span>2</span></span>
+<h3 style="margin: 4px 0 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">PICK A COLLECTION DAY</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A453B; max-width: 24ch">Choose a collection date and time slot.</p>
+</li>
+<li style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 76px; background-color: #f3ead3"><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 52px; line-height: 1; color: #2A2722"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Step </span>3</span></span>
+<h3 style="margin: 4px 0 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">Pay, then collect</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A453B; max-width: 24ch">Pay online. Nothing to pay on the day.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- Shop -->
+
+
+
+<!-- Hives photo -->
+
+
+<!-- About -->
+
+
+<!-- Collection -->
+
+
+
+
+<!-- FAQ -->
+<section class="hh-m-px hh-m-py hh-m-autoh" aria-labelledby="faq-title" style="max-width: 760px; margin: 0 auto; padding: 24px 40px 144px; padding-top: 40px">
+<h2 id="faq-title" style="margin: 0 0 28px; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; text-align: center; color: #6E675B">Questions</h2>
+<div style="border-top: 1px solid #E4DED1">
+<details style="border-bottom: 1px solid #E4DED1"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; font-size: 16px; font-weight: 400">Do you deliver?<svg class="hh-plus" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A2722" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" style="flex: none; transition: transform .25s"><path d="M12 4v16M4 12h16"></path></svg></summary><p style="margin: 0 0 24px; font-size: 15px; line-height: 1.75; color: #4A453B">No, Heatons Honey is collection only. You choose your day and time slot when you order.</p></details>
+<details style="border-bottom: 1px solid #E4DED1"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; font-size: 16px; font-weight: 400">Can I change my collection day?<svg class="hh-plus" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A2722" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" style="flex: none; transition: transform .25s"><path d="M12 4v16M4 12h16"></path></svg></summary><p style="margin: 0 0 24px; font-size: 15px; line-height: 1.75; color: #4A453B">Call or text 07814 854 517 and we'll find another day.</p></details>
+<details style="border-bottom: 1px solid #E4DED1"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; font-size: 16px; font-weight: 400">When do I pay?<svg class="hh-plus" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A2722" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" style="flex: none; transition: transform .25s"><path d="M12 4v16M4 12h16"></path></svg></summary><p style="margin: 0 0 24px; font-size: 15px; line-height: 1.75; color: #4A453B">Online, when you place your order. There's nothing to pay on collection.</p></details>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="hh-m-autoh" style="background: #966712">
+<div class="hh-m-px" style="max-width: 1240px; margin: 0 auto; padding: 56px 40px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; font-size: 14px; color: #FAF8F3">
+<svg viewBox="-10 38 642 372" width="83" height="48" role="img" aria-label="Heatons Honey" fill="none" stroke="#FAF8F3" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="2"><path d="M0 50V390M90 50V390M0 220H90"></path><path d="M180 100H120V200H180M120 150H170"></path><path d="M198 200L236 100L274 200M211 166H261"></path><path d="M292 100H362M327 100V200"></path><path d="M420 88L460.0 119.0V181.0L420 212L380.0 181.0V119.0Z"></path><path d="M478 200V100L542 200V100"></path><path d="M620 116C612 104 600 100 590 100C572 100 562 110 562 124C562 140 576 146 591 150C606 154 620 160 620 176C620 191 608 200 590 200C576 200 566 194 560 184"></path><path d="M180 230L240.0 272.5V357.5L180 400L120.0 357.5V272.5Z"></path><path d="M283 390V240L363 390V240"></path><path d="M482 240H406V390H482M406 315H474"></path><path d="M526 240L574 315L622 240M574 315V390"></path></svg>
+<p style="margin: 0">SK4 3NQ, Stockport · <a href="tel:07814854517" style="color: #FAF8F3">07814 854 517</a> · Instagram [@HANDLE]</p>
+<p style="margin: 0">© 2026 Heatons Honey · Produce of England</p>
+</div>
+</footer>
+
+</div>
+</template>
+<noscript><p style="font-family:sans-serif;padding:40px">Please turn on JavaScript to order from Heatons Honey.</p></noscript>
+<script src="js/dc-lite.js"></script>
+<script src="js/shop.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { pop: null }; }
+  addAndShow(id) { HH.add(id, 1); this.setState({ pop: { id: id, qty: HH.basket()[id] || 0 } }); }
+  renderVals() {
+    const products = HH.shop.products.map((p) => ({
+      href: p.page, name: p.name, detail: p.detail, img: p.tile, alt: p.alt,
+      hoverImg: p.hoverImage || '', hasHover: !!p.hoverImage,
+      priceLabel: HH.money(p.price), linkLabel: 'View ' + p.name, addLabel: 'Add ' + p.name + ' to basket',
+      add: () => this.addAndShow(p.id)
+    }));
+    return Object.assign({
+      tint: '#F3EAD3',
+      priceLabel: HH.priceLabel('honey'),
+      products: products,
+      addHoney: () => this.addAndShow('honey'),
+      closePop: () => this.setState({ pop: null })
+    }, HH.headerVals(this.state.pop));
+  }
+}
+HH.load().then(() => DC.mount(Component));
+</script>
+</body>
+</html>

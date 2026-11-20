@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your basket — Heatons Honey</title>
+<meta name="description" content="Raw honey and hand-poured candles from hives in Heaton Moor, Stockport. Order online and collect in person.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;family=Cormorant+Garamond:ital,wght@1,400&amp;family=Work+Sans:wght@300;400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF8F3}
+a{color:#2A2722}a:hover{color:#8A6A1F}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #2A2722;outline-offset:3px}
+button{font:inherit;color:inherit}
+button:disabled{cursor:not-allowed;opacity:.35}
+input::placeholder{color:#8F887A}
+.hh-btn-dark,.hh-btn-line,.hh-btn-ghost,.hh-btn-plus,.hh-btn-text{transition:background-color .2s ease,color .2s ease,border-color .2s ease,opacity .2s ease}
+.hh-btn-dark:hover:not(:disabled){background:#4A453B !important}
+.hh-btn-line:hover:not(:disabled){background:#2A2722 !important;color:#FAF8F3 !important}
+.hh-btn-ghost:hover:not(:disabled):not([aria-pressed="true"]){background:#EFE8D6 !important}
+.hh-btn-plus:hover{background:#2A2722 !important;color:#FAF8F3 !important;border-color:#2A2722 !important}
+.hh-btn-text:hover:not(:disabled){opacity:.6}
+.hh-pop{animation:hhPop .28s ease}
+@keyframes hhPop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hh-btn-dark,.hh-btn-line,.hh-btn-ghost,.hh-btn-plus,.hh-btn-text{transition:none}.hh-pop{animation:none}}
+.hh-day{transition:background-color .2s ease,border-color .2s ease}
+.hh-day:disabled{opacity:1 !important;cursor:default !important}
+.hh-day:hover:not(:disabled):not([aria-pressed="true"]){background:#F3EAD3 !important}
+@media (max-width:760px){
+.hh-m-autoh{height:auto !important}
+.hh-m-fullw{width:auto !important;max-width:100% !important}
+.hh-m-px{padding-left:20px !important;padding-right:20px !important}
+.hh-m-py{padding-top:56px !important;padding-bottom:64px !important}
+.hh-m-gap{gap:40px !important}
+.hh-m-grid2{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:32px 14px !important}
+.hh-m-first{order:-1}
+.hh-m-jar{width:min(60%,230px) !important}
+.hh-m-hero{padding-top:8px !important;padding-bottom:64px !important}
+.hh-m-pad{padding:24px 20px !important}
+.hh-m-stack{flex-direction:column !important;align-items:flex-start !important;gap:16px !important}
+}
+</style>
+<style>#app:empty{min-height:100vh}</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="view">
+<div style="font-family: 'Work Sans', system-ui, sans-serif; font-weight: 300; color: #2A2722; background: #FAF8F3; min-height: 100%">
+
+<header style="border-bottom: 1px solid #E4DED1">
+<div class="hh-m-px" style="max-width: 1160px; margin: 0 auto; padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap">
+<a href="index.html" aria-label="Heatons Honey, back to home" style="display: block; color: #2A2722">
+<svg viewBox="-10 38 642 372" width="90" height="52" role="img" aria-label="Heatons Honey" fill="none" stroke="currentColor" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="2"><path d="M0 50V390M90 50V390M0 220H90"/><path d="M180 100H120V200H180M120 150H170"/><path d="M198 200L236 100L274 200M211 166H261"/><path d="M292 100H362M327 100V200"/><path d="M420 88L460.0 119.0V181.0L420 212L380.0 181.0V119.0Z"/><path d="M478 200V100L542 200V100"/><path d="M620 116C612 104 600 100 590 100C572 100 562 110 562 124C562 140 576 146 591 150C606 154 620 160 620 176C620 191 608 200 590 200C576 200 566 194 560 184"/><path d="M180 230L240.0 272.5V357.5L180 400L120.0 357.5V272.5Z"/><path d="M283 390V240L363 390V240"/><path d="M482 240H406V390H482M406 315H474"/><path d="M526 240L574 315L622 240M574 315V390"/></svg>
+</a>
+<a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none">Back to the shop</a>
+</div>
+</header>
+
+<sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+<div class="hh-m-px hh-m-py" style="max-width: 1160px; margin: 0 auto; padding: 64px 40px 120px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 56px">
+<h1 style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 32px; letter-spacing: 0.12em; text-transform: uppercase">Order for <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; text-transform: none; letter-spacing: 0.01em; font-size: 1.15em">collection</span></h1>
+<ol aria-label="Order steps" style="margin: 0; padding: 0; list-style: none; display: flex; gap: 28px; flex-wrap: wrap; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+<li aria-current="{{ s.current }}" style="padding-bottom: 8px; border-bottom: 1px solid {{ s.line }}; color: {{ s.color }}">{{ s.num }} {{ s.label }}</li>
+</sc-for>
+</ol>
+</div>
+
+<div class="hh-m-gap" style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start">
+
+<div style="flex: 999 1 560px; min-width: 0">
+
+<sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+<section aria-labelledby="s1" style="display: flex; flex-direction: column; gap: 32px">
+<h2 id="s1" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E675B">Your basket</h2>
+<sc-if value="{{ emptyBasket }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 72px 24px; border-top: 1px solid #E4DED1; border-bottom: 1px solid #E4DED1; text-align: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2A2722" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.5h13l-1.1 11.5H6.6z"></path><path d="M9.5 8.5V7a2.5 2.5 0 0 1 5 0v1.5"></path></svg>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px">Your basket is empty</p>
+<p style="margin: 0; font-size: 15px; color: #4A453B">Add honey or candles from the shop, then come back to choose a collection day.</p>
+<a class="hh-btn-line" href="index.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 30px; border: 1px solid #2A2722; text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">Browse the shop</a>
+</div>
+</sc-if>
+<sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}">
+<ul style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #E4DED1">
+<sc-for list="{{ products }}" as="p" hint-placeholder-count="2">
+<li style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; padding: 20px 0; border-bottom: 1px solid #E4DED1">
+<div style="width: 96px; height: 96px; background: {{ tint }}; display: flex; align-items: center; justify-content: center; flex: none">
+<img src="{{ p.img }}" alt="" style="max-width: 68px; max-height: 74px; width: auto; height: auto">
+</div>
+<div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase">{{ p.name }}</p>
+<p style="margin: 0; font-size: 14px; color: #6E675B">{{ p.detail }}</p>
+<p style="margin: 4px 0 0; font-size: 15px">{{ p.priceLabel }}</p>
+</div>
+<div role="group" aria-label="{{ p.groupLabel }}" style="display: flex; align-items: center; border: 1px solid #CFC7B6">
+<button class="hh-btn-ghost" type="button" onClick="{{ p.dec }}" disabled="{{ p.cantDec }}" aria-label="{{ p.decLabel }}" style="width: 46px; height: 46px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12h16"></path></svg></button>
+<span aria-live="polite" style="min-width: 36px; text-align: center; font-size: 16px">{{ p.qty }}</span>
+<button class="hh-btn-ghost" type="button" onClick="{{ p.inc }}" disabled="{{ p.cantInc }}" aria-label="{{ p.incLabel }}" style="width: 46px; height: 46px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"></path></svg></button>
+</div>
+</li>
+</sc-for>
+</ul>
+</sc-if>
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A453B">Collection only. You'll choose a day to collect from SK4 3NQ next.</p>
+<div style="display: flex; justify-content: flex-end">
+<button class="hh-btn-dark" type="button" onClick="{{ toStep2 }}" disabled="{{ emptyBasket }}" style="min-height: 52px; padding: 0 34px; background: #2A2722; color: #FAF8F3; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">CHOOSE A COLLECTION DAY</button>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+<section aria-labelledby="s2" style="display: flex; flex-direction: column; gap: 32px">
+<h2 id="s2" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E675B">Choose a collection day</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E675B">Next available</p>
+<div role="group" aria-label="Next available collection days" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ quick }}" as="q" hint-placeholder-count="4">
+<button class="hh-day" type="button" onClick="{{ q.pick }}" aria-pressed="{{ q.pressed }}" style="min-height: 44px; padding: 0 18px; border: 1px solid {{ q.border }}; border-radius: 999px; background: {{ q.bg }}; color: {{ q.fg }}; cursor: pointer; font-size: 14px">{{ q.label }}</button>
+</sc-for>
+</div>
+</div>
+
+<div class="hh-m-gap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start">
+<div style="border: 1px solid #E4DED1; padding: 20px 20px 16px; background: #FFFDF8">
+<div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px">
+<button class="hh-btn-ghost" type="button" onClick="{{ prevMonth }}" disabled="{{ cantPrev }}" aria-label="Previous month" style="width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<p aria-live="polite" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px">{{ monthLabel }}</p>
+<button class="hh-btn-ghost" type="button" onClick="{{ nextMonth }}" disabled="{{ cantNext }}" aria-label="Next month" style="width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<div aria-hidden="true" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); padding: 10px 0 8px; border-top: 1px solid #E4DED1; text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.16em; color: #6E675B">
+<span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); row-gap: 4px">
+<sc-for list="{{ cells }}" as="d" hint-placeholder-count="35">
+<sc-if value="{{ d.blank }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true"></span></sc-if>
+<sc-if value="{{ d.real }}" hint-placeholder-val="{{ true }}">
+<button class="hh-day" type="button" onClick="{{ d.pick }}" disabled="{{ d.disabled }}" aria-label="{{ d.aria }}" aria-pressed="{{ d.pressed }}" style="justify-self: center; width: 44px; height: 44px; padding: 0; border: 1px solid {{ d.ring }}; border-radius: 999px; background: {{ d.bg }}; color: {{ d.fg }}; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-size: 15px; font-weight: {{ d.weight }}; font-variant-numeric: tabular-nums">{{ d.n }}<span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 999px; background: {{ d.dot }}"></span></button>
+</sc-if>
+</sc-for>
+</div>
+<p style="margin: 14px 0 0; padding-top: 12px; border-top: 1px solid #E4DED1; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6E675B"><span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 999px; background: #A47F27; flex: none"></span>Collection days: Saturdays and Sundays</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E675B">Time</p>
+<sc-if value="{{ hasDate }}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; line-height: 1.2">{{ dateLong }}</p>
+<div role="group" aria-label="Collection time" style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{ slots }}" as="t" hint-placeholder-count="3">
+<button class="hh-day" type="button" onClick="{{ t.pick }}" aria-pressed="{{ t.pressed }}" style="min-height: 52px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; border: 1px solid {{ t.border }}; background: {{ t.bg }}; color: {{ t.fg }}; cursor: pointer; font-size: 15px; font-variant-numeric: tabular-nums"><span>{{ t.label }}</span><span aria-hidden="true" style="font-size: 13px">{{ t.mark }}</span></button>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ noDate }}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; padding: 28px 20px; border: 1px dashed #CFC7B6; font-size: 14px; line-height: 1.7; color: #6E675B; text-align: center">Pick a day to see collection times.</p>
+</sc-if>
+</div>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 8px">
+<button class="hh-btn-text" type="button" onClick="{{ toStep1 }}" style="min-height: 48px; padding: 0; background: transparent; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">Back</button>
+<button class="hh-btn-dark" type="button" onClick="{{ toStep3 }}" disabled="{{ cantStep3 }}" style="min-height: 52px; padding: 0 34px; background: #2A2722; color: #FAF8F3; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">Continue</button>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+<section aria-labelledby="s3" style="display: flex; flex-direction: column; gap: 32px">
+<h2 id="s3" style="margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #6E675B">Who's collecting?</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="f-name" style="font-size: 14px; color: #4A453B">Name for the order</label><input id="f-name" type="text" autocomplete="name" required value="{{ name }}" onInput="{{ onName }}" style="height: 48px; padding: 0 2px; border: 0; border-bottom: 1px solid #A39A87; background: transparent; font: inherit; font-size: 16px"></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="f-phone" style="font-size: 14px; color: #4A453B">Mobile (optional, in case your slot needs to move)</label><input id="f-phone" type="tel" autocomplete="tel" value="{{ phone }}" onInput="{{ onPhone }}" style="height: 48px; padding: 0 2px; border: 0; border-bottom: 1px solid #A39A87; background: transparent; font: inherit; font-size: 16px"></div>
+</div>
+<div style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; background: #FFFDF8; border: 1px solid #E4DED1">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A2722" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A453B">Next you'll pay on Square's secure checkout page, by card, Apple Pay or Google Pay. Square emails your receipt, and your collection day and time come with the order.</p>
+</div>
+<sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #B4532A; color: #8A3A17; font-size: 15px; line-height: 1.6">{{ error }}</p>
+</sc-if>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<button class="hh-btn-text" type="button" onClick="{{ toStep2 }}" style="min-height: 48px; padding: 0; background: transparent; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">Back</button>
+<button class="hh-btn-dark" type="button" onClick="{{ pay }}" disabled="{{ busy }}" style="min-height: 54px; padding: 0 40px; background: #2A2722; color: #FAF8F3; border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase">{{ payText }}</button>
+</div>
+</section>
+</sc-if>
+</div>
+
+<aside class="hh-m-pad" aria-label="Order summary" style="flex: 1 1 300px; min-width: 0; background: {{ tint }}; padding: 36px; display: flex; flex-direction: column; gap: 18px; font-size: 15px">
+<p style="margin: 0 0 4px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px">Your order</p>
+<sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>{{ l.qty }} × {{ l.name }}</span><span>{{ l.total }}</span></div>
+</sc-for>
+<sc-if value="{{ emptyBasket }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; color: #5E584C">Nothing added yet</p></sc-if>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Delivery</span><span>Collection</span></div>
+<div style="border-top: 1px solid #D8CDAF; padding-top: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #5E584C">Collecting</span>
+<span style="line-height: 1.5">{{ collectLabel }}</span>
+<span style="color: #5E584C">SK4 3NQ, full address on confirmation</span>
+</div>
+<div style="border-top: 1px solid #D8CDAF; padding-top: 18px; display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'Josefin Sans', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase">Total</span><span style="font-size: 20px">{{ totalLabel }}</span></div>
+</aside>
+</div>
+</div>
+</sc-if>
+
+
+
+</div>
+</template>
+<noscript><p style="font-family:sans-serif;padding:40px">Please turn on JavaScript to order from Heatons Honey.</p></noscript>
+<script src="js/dc-lite.js"></script>
+<script src="js/shop.js"></script>
+<script>
+const CHECKOUT_URL = '/.netlify/functions/checkout';
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { step: 1, monthOffset: 0, date: null, slot: null, name: '', phone: '', busy: false, error: '' };
+  }
+  pay() {
+    const s = this.state, b = HH.basket();
+    if (!s.name.trim()) { this.setState({ error: 'Please add a name for the order.' }); return; }
+    this.setState({ busy: true, error: '' });
+    const items = Object.keys(b).filter((id) => HH.product(id)).map((id) => ({ id: id, qty: b[id] }));
+    fetch(CHECKOUT_URL, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: items, date: s.date, start: s.slot, name: s.name.trim(), phone: s.phone.trim() })
+    }).then((r) => r.json().catch(() => ({})).then((data) => ({ ok: r.ok, data: data })))
+      .then((res) => {
+        if (!res.ok || !res.data.url) throw new Error(res.data.error || 'Something went wrong starting the payment.');
+        try {
+          localStorage.setItem('hh-last-order', JSON.stringify({ date: s.date, start: s.slot, items: items, name: s.name.trim(), at: Date.now() }));
+        } catch (e) {}
+        window.location.href = res.data.url;
+      })
+      .catch((e) => this.setState({ busy: false, error: e.message + ' If it keeps happening, call or text 07814 854 517.' }));
+  }
+  renderVals() {
+    const s = this.state, ink = '#2A2722', paper = '#FAF8F3', tint = '#F3EAD3';
+    const items = HH.basket();
+    const chosen = HH.shop.products.filter((p) => (items[p.id] || 0) > 0);
+    const setQty = (id, q) => { HH.setQty(id, q); this.setState({}); };
+    const products = chosen.map((p) => {
+      const q = items[p.id];
+      return { name: p.name, detail: p.detail, img: p.tile, qty: q, priceLabel: HH.money(p.price),
+        groupLabel: p.name + ' quantity', decLabel: 'Remove one ' + p.name, incLabel: 'Add one ' + p.name,
+        cantDec: false, cantInc: q >= 24, inc: () => setQty(p.id, q + 1), dec: () => setQty(p.id, q - 1) };
+    });
+    const allPriced = chosen.every((p) => p.price != null);
+    const lines = chosen.map((p) => ({ qty: items[p.id], name: p.name, total: p.price != null ? HH.money(p.price * items[p.id]) : '£[PRICE]' }));
+    const sum = chosen.reduce((t, p) => t + (p.price || 0) * items[p.id], 0);
+    const totalLabel = chosen.length === 0 ? '£0.00' : (allPriced ? HH.money(sum) : '£[TOTAL]');
+    const itemCount = chosen.reduce((t, p) => t + items[p.id], 0);
+
+    const DAYS = HH.DAYS, MONTHS = HH.MONTHS, today = HH.today(), last = HH.lastDay();
+    const first = new Date(today.getFullYear(), today.getMonth() + s.monthOffset, 1);
+    const lastMonthOffset = (last.getFullYear() - today.getFullYear()) * 12 + last.getMonth() - today.getMonth();
+    const lead = (first.getDay() + 6) % 7;
+    const daysIn = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+    const cells = [];
+    for (let i = 0; i < lead; i++) cells.push({ blank: true, real: false });
+    for (let n = 1; n <= daysIn; n++) {
+      const d = new Date(first.getFullYear(), first.getMonth(), n);
+      const ok = HH.isOpen(d), key = HH.iso(d), sel = s.date === key, isToday = d.getTime() === today.getTime();
+      cells.push({ blank: false, real: true, n: n, disabled: !ok, pressed: sel ? 'true' : 'false',
+        aria: DAYS[d.getDay()] + ' ' + n + ' ' + MONTHS[d.getMonth()] + (isToday ? ', today' : '') + (ok ? ', collection available' : ', unavailable'),
+        bg: sel ? ink : 'transparent', fg: sel ? paper : (ok ? ink : '#BDB5A4'),
+        ring: sel ? ink : (isToday ? '#A39A87' : 'transparent'), weight: ok ? '500' : '300',
+        dot: sel ? paper : (ok ? '#A47F27' : 'transparent'),
+        pick: () => this.setState({ date: key, slot: null }) });
+    }
+    const quick = [];
+    for (let d = new Date(today); quick.length < 4 && d <= last; d.setDate(d.getDate() + 1)) {
+      if (!HH.isOpen(d)) continue;
+      const key = HH.iso(d), sel = s.date === key;
+      const off = (d.getFullYear() - today.getFullYear()) * 12 + d.getMonth() - today.getMonth();
+      quick.push({ label: DAYS[d.getDay()].slice(0, 3) + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()].slice(0, 3), pressed: sel ? 'true' : 'false',
+        bg: sel ? ink : 'transparent', fg: sel ? paper : ink, border: sel ? ink : '#CFC7B6',
+        pick: () => this.setState({ date: key, slot: null, monthOffset: off }) });
+    }
+    let slots = [], dateLong = '', slotText = '';
+    if (s.date) {
+      const d = HH.fromIso(s.date);
+      dateLong = HH.dateLong(d);
+      slots = HH.startsFor(d).map((start) => {
+        const on = s.slot === start;
+        return { label: HH.slotLabel(start), mark: on ? 'Selected' : '', pressed: on ? 'true' : 'false',
+          bg: on ? ink : 'transparent', fg: on ? paper : ink, border: on ? ink : '#CFC7B6', pick: () => this.setState({ slot: start }) };
+      });
+      if (s.slot) slotText = HH.slotLabel(s.slot);
+    }
+    const collectLabel = s.date ? (dateLong + (s.slot ? ', ' + slotText : ', choose a time')) : 'Not chosen yet';
+    const steps = [['01', 'Basket'], ['02', 'Choose collection day'], ['03', 'Pay']].map((p, i) => {
+      const n = i + 1, cur = s.step === n, done = s.step > n;
+      return { num: p[0], label: p[1], current: cur ? 'step' : 'false', line: cur ? ink : 'transparent', color: cur || done ? ink : '#6E675B' };
+    });
+    const step = itemCount === 0 ? 1 : s.step;
+    return Object.assign({
+      tint: tint, totalLabel: totalLabel, steps: steps, cells: cells, quick: quick, slots: slots, products: products, lines: lines,
+      emptyBasket: itemCount === 0, hasItems: itemCount > 0,
+      notDone: true, isStep1: step === 1, isStep2: step === 2, isStep3: step === 3,
+      toStep1: () => this.setState({ step: 1, error: '' }),
+      toStep2: () => this.setState({ step: 2, error: '' }),
+      toStep3: () => this.setState({ step: 3 }),
+      cantStep3: !(s.date && s.slot),
+      monthLabel: MONTHS[first.getMonth()] + ' ' + first.getFullYear(),
+      cantPrev: s.monthOffset <= 0, cantNext: s.monthOffset >= lastMonthOffset,
+      prevMonth: () => this.setState({ monthOffset: Math.max(0, s.monthOffset - 1) }),
+      nextMonth: () => this.setState({ monthOffset: Math.min(lastMonthOffset, s.monthOffset + 1) }),
+      hasDate: !!s.date, noDate: !s.date, dateLong: dateLong, collectLabel: collectLabel,
+      name: s.name, phone: s.phone,
+      onName: (e) => { this.state.name = e.target.value; },
+      onPhone: (e) => { this.state.phone = e.target.value; },
+      busy: s.busy, error: s.error,
+      payText: s.busy ? 'Taking you to Square…' : 'Pay ' + totalLabel + ' with Square',
+      pay: () => this.pay()
+    }, HH.headerVals(null));
+  }
+}
+HH.load().then(() => DC.mount(Component));
+</script>
+</body>
+</html>
