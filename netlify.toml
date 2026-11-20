@@ -2,6 +2,11 @@
   publish = "site"
   functions = "netlify/functions"
 
+# Netlify's "pretty URLs" rewrites links in the HTML and breaks some of them
+# (it re-quotes attributes in a way Safari can't read), so it's turned off.
+[build.processing.html]
+  pretty_urls = false
+
 [functions]
   node_bundler = "esbuild"
 
